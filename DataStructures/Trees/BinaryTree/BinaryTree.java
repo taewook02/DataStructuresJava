@@ -84,6 +84,6 @@ public class BinaryTree<Key extends Comparable<Key>> {
         if (n.getKey().compareTo(m.getKey()) != 0)
             return false;
         
-        return (isEqual(n.getLeft(), m.getLeft() && isEqual(n.getRight(), m.getRight())));
+        return (isEqual(n.getLeft(), m.getLeft()) && isEqual(n.getRight(), m.getRight()));
     }
 }
