@@ -1,7 +1,7 @@
 package DataStructures.Queues.ListQueue;
 
 import java.util.NoSuchElementException;
-import DataStructures.Nodes.Node;
+import DataStructures.Nodes.Node.Node;
 
 public class ListQueue <E> {
     private Node <E> front, rear;

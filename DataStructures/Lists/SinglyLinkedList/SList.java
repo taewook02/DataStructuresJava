@@ -1,6 +1,6 @@
 package DataStructures.Lists.SinglyLinkedList;
 
-import DataStructures.Nodes.Node;
+import DataStructures.Nodes.Node.Node;
 
 import java.util.NoSuchElementException;
 
