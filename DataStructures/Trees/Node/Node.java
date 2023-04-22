@@ -3,7 +3,7 @@ package DataStructures.Trees.Node;
 public class Node<Key extends Comparable<Key>> {
     private Key item;
     private Node<Key> left;
-    private Node<key> right;
+    private Node<Key> right;
 
     // 생성자
     public Node(Key newItem, Node lt, Node rt) {
