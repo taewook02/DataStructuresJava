@@ -27,8 +27,8 @@ public class DList <E> {
     public void insertAfter(DNode p, E newItem) {
         DNode t = p.getNext();
         DNode newNode = new DNode(newItem, p, t);
-        p.setPrevious(newNode);
-        t.setNext(newNode);
+        t.setPrevious(newNode);
+        p.setNext(newNode);
         size++;
     }
 
@@ -40,5 +40,15 @@ public class DList <E> {
         f.setNext(r);
         r.setPrevious(f);
         size--;
+    }
+
+    public void print() {
+        DNode p = head.getNext();
+        while (p != null) {
+            System.out.print(p.getItem());
+            System.out.print(" ");
+            p = p.getNext();
+        }
+        System.out.println();
     }
 }
