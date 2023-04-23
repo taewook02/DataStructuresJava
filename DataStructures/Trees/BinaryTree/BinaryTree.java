@@ -65,7 +65,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
         if (n == null)
             return 0;
         else
-            return (1 + size(n.getLeft()));
+            return (1 + size(n.getLeft()) + size(n.getRight()));
     }
 
     // n을 루트로 하는 서브 트리의 높이
