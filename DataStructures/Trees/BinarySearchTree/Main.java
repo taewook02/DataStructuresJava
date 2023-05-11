@@ -3,7 +3,7 @@ package DataStructures.Trees.BinarySearchTree;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         System.out.println();
         BST<Integer, String> bst = new BST<>(50, "Apple");
 
