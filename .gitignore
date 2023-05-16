@@ -59,5 +59,12 @@ Temporary Items
 # pdf files
 *.pdf
 
-# 
-Assignments/
+# doc files
+*.docx
+*.doc
+*.hwp
+
+# euckr encoded files
+**/EUCKR/
+
+#Assignments/
