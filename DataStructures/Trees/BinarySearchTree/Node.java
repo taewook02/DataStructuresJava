@@ -4,7 +4,8 @@ public class Node <Key extends Comparable<Key>, Value> {
     private Key id;
     private Value name;
     private Node left, right;
-    
+
+    // 생성자
     public Node(Key newId, Value newName) {
         id = newId;
         name = newName;
