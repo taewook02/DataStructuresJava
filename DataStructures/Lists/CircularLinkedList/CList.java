@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 import DataStructures.Nodes.Node.Node;
 
 public class CList<E> {
-    private Node last; // 리스트의 마지막 노드
+    private Node<E> last; // 리스트의 마지막 노드
     private int size; // 리스트의 노드 수
 
     // 생성자
@@ -23,7 +23,7 @@ public class CList<E> {
 
     // last가 가리키는 노드의 다음에 새 노드 삽입
     public void insert(E newItem) {
-        Node newNode = new Node(newItem, null);
+        Node<E> newNode = new Node<E>(newItem, null);
 
         if (last == null) {
             newNode.setNext(newNode);
@@ -39,7 +39,7 @@ public class CList<E> {
     public void delete() {
         if (isEmpty()) throw new NoSuchElementException();
 
-        Node x = last.getNext();
+        Node<E> x = last.getNext();
         if (x==last) {
             last = null; // 리스트에 노드가 1개인 경우
         } else {

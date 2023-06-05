@@ -17,7 +17,7 @@ public class ListQueue <E> {
 
     // 큐의 rear에 항목 추가
     public void add(E newItem) {
-        Node newNode = new Node(newItem, null);
+        Node<E> newNode = new Node<E>(newItem, null);
 
         if (isEmpty())
             front = newNode;
@@ -45,7 +45,7 @@ public class ListQueue <E> {
     }
 
     public void print() {
-        Node p = front;
+        Node<E> p = front;
         while (p.getItem() != null) {
             System.out.print(p.getItem());
             System.out.print(" ");

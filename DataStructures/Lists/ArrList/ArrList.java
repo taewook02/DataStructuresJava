@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 public class ArrList <E>
 {
-    private E a[];
+    private E[] a;
     private int size;
 
     public ArrList() {
@@ -36,8 +36,7 @@ public class ArrList <E>
 
     public void resize(int newSize) {
         Object[] t = new Object[newSize];
-        for (int i = 0; i < size; i++)
-            t[i] = a[i];
+        if (size >= 0) System.arraycopy(a, 0, t, 0, size);
         a = (E[]) t;
     }
 
@@ -54,8 +53,8 @@ public class ArrList <E>
     }
 
     public void print() {
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]);
+        for (E e : a) {
+            System.out.print(e);
             System.out.print(" ");
         }
         System.out.println();

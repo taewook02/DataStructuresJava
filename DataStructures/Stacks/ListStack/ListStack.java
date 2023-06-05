@@ -22,9 +22,7 @@ public class ListStack <E> {
     }
 
     public void push(E newItem) {
-        Node newNode = new Node(newItem, top);
-
-        top = newNode;
+        top = new Node<E>(newItem, top);
         size++;
     }
 
@@ -43,7 +41,7 @@ public class ListStack <E> {
     public boolean isEmpty() { return size==0; }
 
     public void print() {
-        Node n = top;
+        Node<E> n = top;
         for (int i=0; i<size(); i++) {
             System.out.print(n.getItem()+" ");
             if (n.getNext()!=null) n = n.getNext();

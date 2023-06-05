@@ -66,8 +66,8 @@ public class ArrayQueue <E> {
 
     public void print() {
         System.out.print("항목수: " + size + "/ ");
-        for (int i = 0; i < q.length; i++) {
-            System.out.print(q[i] + " ");
+        for (E e : q) {
+            System.out.print(e + " ");
         }
         System.out.print("\n");
     }

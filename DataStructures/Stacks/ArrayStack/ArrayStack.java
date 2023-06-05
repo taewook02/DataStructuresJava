@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 
 // array로 구현한 stack
 public class ArrayStack <E> {
-    private E s[]; // stack을 저장할 배열
+    private E[] s; // stack을 저장할 배열
     private int top; // stack의 top 항목의 인덱스
 
     public ArrayStack() {
@@ -55,7 +55,7 @@ public class ArrayStack <E> {
 
     public void resize(int newSize) {
         Object[] t = new Object[newSize];
-        for (int i=0; i<size(); i++) t[i] = s[i];
+        if (size() >= 0) System.arraycopy(s, 0, t, 0, size());
         s = (E[]) t;
     }
 
