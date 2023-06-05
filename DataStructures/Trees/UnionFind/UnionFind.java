@@ -22,7 +22,7 @@ public class UnionFind {
 
         if (a[iroot].getRank() > a[jroot].getRank())
             a[jroot].setParent(iroot);
-        else if (a[iroot].getRank() > a[jroot].getRank())
+        else if (a[iroot].getRank() < a[jroot].getRank())
             a[iroot].setParent(jroot);
         else {
             a[jroot].setParent(iroot);

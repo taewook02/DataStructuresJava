@@ -4,22 +4,22 @@ import java.util.*;
 import DataStructures.Trees.Node.Node;
 
 public class BinaryTree<Key extends Comparable<Key>> {
-    private Node root;
+    private Node<Key> root;
 
     // 생성자
     public BinaryTree() { root = null; }
 
     // root 노드 반환 
-    public Node getRoot() { return root; }
+    public Node<Key> getRoot() { return root; }
 
     // root 노드 값 저장
-    public void setRoot(Node newRoot) { root = newRoot; }
+    public void setRoot(Node<Key> newRoot) { root = newRoot; }
 
     // root가 null인지 확인하여 빈 트리인지 확인
     public boolean isEmpty() { return root == null; }
 
     // 전위 순회
-    public void preorder(Node n) {
+    public void preorder(Node<Key> n) {
         if (n !=null) {
             System.out.print(n.getKey()+" ");
             preorder(n.getLeft());
@@ -28,7 +28,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // 중위 순회
-    public void inorder(Node n) {
+    public void inorder(Node<Key> n) {
         if (n != null) {
             inorder(n.getLeft());
             System.out.print(n.getKey()+" ");
@@ -37,7 +37,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // 후위 순회
-    public void postorder(Node n) {
+    public void postorder(Node<Key> n) {
         if (n != null) {
             postorder(n.getLeft());
             postorder(n.getRight());
@@ -46,9 +46,9 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // 레벨 순회
-    public void levelorder(Node root) {
-        Queue <Node> q = new LinkedList <Node> ();
-        Node t;
+    public void levelorder(Node<Key> root) {
+        Queue<Node> q = new LinkedList<Node> ();
+        Node<Key> t;
         q.add(root);
         while (!q.isEmpty()) {
             t = q.remove();
@@ -61,7 +61,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // n을 루트로하는 (서브)트리에 있는 노드 수
-    public int size(Node n) {
+    public int size(Node<Key> n) {
         if (n == null)
             return 0;
         else
@@ -69,7 +69,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // n을 루트로 하는 서브 트리의 높이
-    public int height(Node n) {
+    public int height(Node<Key> n) {
         if (n == null) {
             return 0;
         } else {
@@ -78,7 +78,7 @@ public class BinaryTree<Key extends Comparable<Key>> {
     }
 
     // 두 개의 트리의 동일성 검사
-    public static boolean isEqual(Node n, Node m) {
+    public boolean isEqual(Node<Key> n, Node<Key> m) {
         if (n == null || m == null)
             return n == m;
         if (n.getKey().compareTo(m.getKey()) != 0)
