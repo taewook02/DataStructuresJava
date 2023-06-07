@@ -2,7 +2,7 @@ package DataStructures.Lists.SinglyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        SList<String> s = new SList<String>();
+        SList<String> s = new SList<>();
 
         s.insertFront("orange"); s.insertFront("apple");
         s.insertAfter("cherry", s.head.getNext());

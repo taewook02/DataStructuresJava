@@ -8,8 +8,8 @@ public class DList<E> {
     protected int size;
 
     protected DList() {
-        head = new DNode<E> (null, null, null);
-        tail = new DNode<E> (null, head, null); // tail의 이전 노드를 head로 설정
+        head = new DNode<> (null, null, null);
+        tail = new DNode<> (null, head, null); // tail의 이전 노드를 head로 설정
         head.setNext(tail); // head의 다음 노드를 tail로 설정
         size = 0;
     }
@@ -17,7 +17,7 @@ public class DList<E> {
     // 새 노드를 노드 p 앞에 삽입
     public void insertBefore(DNode<E> p, E newItem) {
         DNode<E> t = p.getPrevious();
-        DNode<E> newNode = new DNode<E>(newItem, t, p);
+        DNode<E> newNode = new DNode<>(newItem, t, p);
         p.setPrevious(newNode);
         t.setNext(newNode);
         size++;
@@ -26,7 +26,7 @@ public class DList<E> {
     // 새 노드를 노드 p 뒤에 삽입
     public void insertAfter(DNode<E> p, E newItem) {
         DNode<E> t = p.getNext();
-        DNode<E> newNode = new DNode<E>(newItem, p, t);
+        DNode<E> newNode = new DNode<>(newItem, p, t);
         t.setPrevious(newNode);
         p.setNext(newNode);
         size++;

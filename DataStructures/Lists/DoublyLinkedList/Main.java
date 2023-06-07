@@ -2,7 +2,7 @@ package DataStructures.Lists.DoublyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        DList <String> s = new DList <String> ();
+        DList <String> s = new DList <> ();
 
         s.insertAfter(s.head, "apple"); s.print();
         s.insertBefore(s.tail, "orange"); s.print();

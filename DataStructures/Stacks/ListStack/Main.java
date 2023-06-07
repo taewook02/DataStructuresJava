@@ -2,7 +2,7 @@ package DataStructures.Stacks.ListStack;
 
 public class Main {
     public static void main(String[] args) {
-        ListStack <String> stack = new ListStack <String> ();
+        ListStack <String> stack = new ListStack<> ();
 
         stack.push("apple");
         stack.push("orange");

@@ -2,7 +2,7 @@ package DataStructures.Stacks.ArrayStack;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayStack <String> stack = new ArrayStack <String> ();
+        ArrayStack <String> stack = new ArrayStack<> ();
 
         stack.push("apple");
         stack.push("orange");

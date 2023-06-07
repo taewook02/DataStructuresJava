@@ -22,7 +22,7 @@ public class ListStack <E> {
     }
 
     public void push(E newItem) {
-        top = new Node<E>(newItem, top);
+        top = new Node<>(newItem, top);
         size++;
     }
 
