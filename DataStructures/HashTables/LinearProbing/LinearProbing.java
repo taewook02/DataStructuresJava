@@ -43,7 +43,7 @@ public class LinearProbing<Key, Value> {
         int j = 1;
 
         while (arr[i] != null) { // arr[i]가 empty가 아닌 경우
-            if(arr[i].equals(k)) { // 탐색 성공
+            if (arr[i].equals(k)) { // 탐색 성공
                 return dat[i];
             }
             i = (initPos + j++) % this.MOD; // i를 다음 위치로
